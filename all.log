@@ -1,8 +1,0 @@
-2020-11-19 14:27:04.142 [main] DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=86 (valid until 2020-11-20 01:12:07)
-2020-11-19 14:27:04.148 [main] DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome86=86.0.4240.22 (valid until 2020-11-20 01:12:07)
-2020-11-19 14:27:04.148 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 86.0.4240.22 (since Google Chrome 86 is installed in your machine)
-2020-11-19 14:27:04.213 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 86.0.4240.22 found in cache
-2020-11-19 14:27:04.215 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/lena/.m2/repository/webdriver/chromedriver/mac64/86.0.4240.22/chromedriver
-2020-11-19 14:27:31.203 [main] INFO  pages.CartOfCarPage - verify by loop header description, images carousel, text description vin, trim, condition, certification, carts   
-2020-11-19 14:28:52.490 [main] INFO  steps.AboutUsStepdefs - Verify About US Page is loaded
-2020-11-19 14:28:55.518 [main] INFO  steps.InventoryStepdefs - Count care on page

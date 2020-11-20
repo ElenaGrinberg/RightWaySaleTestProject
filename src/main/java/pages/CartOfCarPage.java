@@ -21,18 +21,21 @@ public class CartOfCarPage extends BasePage {
     public String goToPageAndClickOnCar() {
         goToPage(INVENTORY_PAGE);
         clickElementByXpath(AUTO_PATH);
+        logger.info("goToPageAndClickOnCar. go to page, click on car, return current page =" +getCurrentUrlPage());
         return getCurrentUrlPage();
     }
 
     public boolean cartsElementsAreDisplayed(String param) {
+        logger.info(" cartsElementsAreDisplayed" +String.format(CART_OF_BODY, param) );
         return isElementDisplayed(String.format(CART_OF_BODY, param));
     }
 
     public boolean verbalDescription() {
-        logger.info("verify by loop header description, images carousel, text description vin, trim, condition, certification, carts   ");
+        logger.info("verbalDescription. Verify by loop header description, images carousel, text description vin, trim, condition, certification, carts");
         String[] words = {HEADING_OF_DESCRIPTION, IMAGE1, IMAGE2, VIN, STOCK, TRIM, CONDITION, CERTIFICATION};
         for (int i = 0; i < words.length; i++) {
             System.out.println(words[i]);
+            logger.info(words[i]);
             if (!isElementDisplayed(words[i])) {
                 return false;
             }

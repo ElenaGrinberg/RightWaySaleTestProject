@@ -12,12 +12,13 @@ public class AboutUsStepdefs {
 
     AboutUsPage aboutUsPage;
 
-    public AboutUsStepdefs(){
+    public AboutUsStepdefs() {
         aboutUsPage = new AboutUsPage();
     }
+
     @And("Verify About US Page is loaded")
     public void verifyAboutUSPageIsLoaded() {
-        logger.info("Verify About US Page is loaded");
+        logger.info("test.verifyAboutUSPageIsLoaded(). test get boolean = " + aboutUsPage.logoIsDisplayed());
         Assertions.assertTrue(aboutUsPage.logoIsDisplayed());
 
     }

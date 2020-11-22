@@ -4,10 +4,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class MainPage extends BasePage{
-    public final static String HOME_PATH = "(//a[text() = 'Home'])[1]";
-    public final static String ABOUT_US_MENU_PATH = "(//a[text() = 'About Us'])[1]";
-    public final static String CONTACT_US_MENU_PATH = "(//a[text() = 'Contact Us'])[1]";
-    public final static String INVENTORY_MENU_PATH = "(//a[text() = 'Inventory'])[1]";
+    public final static String HOME_PATH = "//ul[@id='w1']/li/a[text()='Home']";
+    public final static String ABOUT_US_MENU_PATH = "//ul[@id='w1']/li/a[text() = 'About Us']";
+    public final static String CONTACT_US_MENU_PATH = "//ul[@id='w1']/li/a[text() = 'Contact Us']";
+    public final static String INVENTORY_MENU_PATH = "//ul[@id='w1']/li/a[text() = 'Inventory']";
     public final static String CAR_CAROUSEL = "//div[@class = 'img-list-respnsivex']";
     public final static String GOOGLE_REVIEW_CAROUSEL = "//p[@class = 'review-content']";
     public final static String NAV_BRAND = "//a[@class= 'navbar-brand' ]";
@@ -42,9 +42,9 @@ public class MainPage extends BasePage{
              return isElementDisplayed(GOOGLE_REVIEW_CAROUSEL);
     }
 
-    public void clickOnHomeLink(){
+    public boolean clickOnHomeLink(){
         logger.info("clickOnHomeLink");
-        clickElementByXpath(HOME_PATH);
+        return isElementDisplayed(HOME_PATH);
     }
     public String getUrlCurrentPage(){
         logger.info("getUrlCurrentPage/ return = " + getCurrentUrlPage());

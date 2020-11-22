@@ -13,8 +13,8 @@ Feature: Test main page 'right way auto sales' site
 
 
   Scenario: Check Home link on navigate bar
-    Then Click to Home menu
-    And Verify the Main Page is loaded
+    Then Verify the Home link is visible
+
 
   Scenario: Check About US link on navigate bar
     Then Click to About US menu

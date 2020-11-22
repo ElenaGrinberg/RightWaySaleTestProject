@@ -17,7 +17,7 @@ public abstract class BasePage {
     public static final Logger logger = LogManager.getLogger(BasePage.class);
 
     protected WebDriver driver = WebDriverSetup.getWebDriver();
-    protected WebDriverWait wait = new WebDriverWait(driver, 200);
+    protected WebDriverWait wait = new WebDriverWait(driver, 20);
 
     public void goToPage(String URL) {
         driver.get(URL);
@@ -39,8 +39,8 @@ public abstract class BasePage {
 
 
     public void clickElementByXpath(String xpath) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
         try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
             driver.findElement(By.xpath(xpath)).click();
         }catch (Error e){
             logger.error("BasePage.Error.Click element by Xpath" + xpath);

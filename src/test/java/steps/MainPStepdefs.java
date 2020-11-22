@@ -49,19 +49,13 @@ public class MainPStepdefs {
     }
 
 
-    @Then("Click to Home menu")
-    public void clickToHomeMenu() {
+    @Then("Verify the Home link is visible")
+    public void homMenuIsVisivle() {
         logger.info("clickToHomeMenu()");
-        mainPage.clickOnHomeLink();
+        Assert.assertTrue(mainPage.clickOnHomeLink());
     }
 
-    @And("Verify the Main Page is loaded")
-    public void verifyTheMainPageIsLoaded() {
-        String currentURL = mainPage.getUrlCurrentPage();
-        String expectedURL = "https://www.rightwayautosale.com/";
-        logger.info("verifyTheMainPageIsLoaded(). expectedURL = " +expectedURL +"  currentURL = " +currentURL);
-        Assertions.assertEquals(expectedURL, currentURL);
-    }
+
 
     @Then("Click to About US menu")
     public void clickToAboutUSMenu() {
